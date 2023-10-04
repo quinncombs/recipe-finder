@@ -17,17 +17,19 @@
   
 </head>
 <body class=" bg-gray-300">
-    <header class="flex justify-center border-2 border-green-400">
+    <header class="flex justify-center border-2 border-green-400 ">
         <h1 class="bigTitle text-3xl border-r-2 border-l-2 p-2 w-1/4 text-center rounded-full bg-green-400 border-green-400">Fridge Recipes</h1>
     </header>
-    <img class="w border-r-2 border-b-2 border-green-400 " src="assets/images/fridgepixel.ico" alt="">
+    <div class="w-40 inline-block">
+        <img class=" border-r-2 border-b-2 border-green-400 " src="assets/images/fridgepixel.ico" alt="">
+    </div>
 
-    <div id="searchArea">
-        <span id="searchTitle" class="bigTitle">Oh to find a meal with the little (or much) you have...</span>
+    <div id="searchArea flex shrink inline-block">
+        <span id="searchTitle" class="bigTitle inline-block">Oh to find a meal with the little (or much) you have...</span>
         <br>
-        <input id="searchType" class="searchGen" placeholder="Type and you shall find"></input>
+        <input id="searchType" class="searchGen inline-block" placeholder="Type and you shall find"></input>
         <br>
-        <button id="searchBtn" class="searchGen">Search</button>
+        <button id="searchBtn" class="searchGen inline-block">Search</button>
     </div>
     <aside id="randoMeal">Random Meal Time!
         <p> Insert meal here</p>
