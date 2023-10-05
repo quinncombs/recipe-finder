@@ -18,21 +18,21 @@
 </head>
 <body class=" ">
 
-    <header class="flex justify-center border-2 border-black ">
-        <h1 class="bigTitle text-3xl border-black border-r-2 border-l-2 p-2 w-1/4 text-center ">Fridge Recipes</h1>
-    </header>
-
-    <main class="h-screen w-screen bg-no-repeat bg-cover"
-    style="background-image: url('https://img.freepik.com/premium-photo/healthy-vegetarian-eating-super-food-concept-healthy-eating-black-stone-background-top-view_187166-29100.jpg');">
-
-        <div id="searchArea flex shrink inline-block">
-            <span id="searchTitle" class="bigTitle inline-block">Oh to find a meal with the little (or much) you have...</span>
-            <br>
-                <input id="searchType" class="searchGen inline-block" placeholder="Type and you shall find"></input>
-            <br>
-            <button id="searchBtn" class="searchGen inline-block">Search</button>
+    
+    <main class="h-screen  bg-no-repeat bg-cover"
+    style="background-image: url('https://img.freepik.com/premium-photo/healthy-vegetarian-eating-super-food-concept-healthy-eating-black-stone-background-top-view_187166-29100.jpg'); ">
+        <div class="bigTitle text-3xl p-12 w-1/4 text-center text-white absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.6)">
+            <h1  >Fridge Recipes</h1>
+            <div id="searchArea flex text-white text-center text-3xl ">
+                <span id="searchTitle" class="bigTitle inline-block">Oh to find a meal with the little (or much) you have...</span>
+                <br>
+                    <input id="searchType" class="searchGen inline-block" placeholder="Type and you shall find"></input>
+                <br>
+                <button id="searchBtn" class="searchGen inline-block">Search</button>
+            </div>
         </div>
-        <aside id="randoMeal">Random Meal Time!
+        <aside class="p-12 w-1/4 text-center text-white h-full w-full" id="randoMeal">Random Meal Time!
             <p> Insert meal here</p>
         </aside>
     </main>
