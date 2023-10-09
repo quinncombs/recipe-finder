@@ -105,4 +105,46 @@ const createMeal = (meal) => {
 		}
   }
 }
-	
+
+{
+
+function createMeal(meal) {
+ 
+    const foodRecipes = document.getElementById("food-recipes");
+
+    foodRecipes.innerHTML = "";
+
+    const mealList = document.createElement("ul");
+
+    const ingredients = [];
+    for (let i = 1; i <= 20; i++) {
+        if (meal[`strIngredient${i}`]) {
+            ingredients.push(`${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`);
+        } else {
+            break;
+        }
+    }
+
+    mealList.innerHTML = `
+        <li>Name: ${meal.strMeal}</li>
+        <li>Category: ${meal.strCategory}</li>
+        <li>Area: ${meal.strArea}</li>
+        <li>Ingredients: ${ingredients.join(", ")}</li>
+        <li>Instructions: ${meal.strInstructions}</li>
+    `;
+
+    foodRecipes.appendChild(mealList);
+
+    foodRecipes.classList.remove("hide");
+}
+
+const mealButton = document.getElementById("mealButton");
+
+mealButton.addEventListener("click", () => {
+    fetch(mealApiUrl)
+        .then((res) => res.json())
+        .then((res) => {
+            createMeal(res.meals[0]);
+        });
+});
+}
